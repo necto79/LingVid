@@ -1,0 +1,372 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Unitivid</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 30px;
+        }
+
+        .profile-sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-avatar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-menu {
+            list-style: none;
+        }
+
+        .profile-menu li {
+            margin-bottom: 10px;
+        }
+
+        .profile-menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 4px;
+        }
+
+        .profile-menu a.active,
+        .profile-menu a:hover {
+            background-color: #f1f1f1;
+            color: #ff0000;
+        }
+
+        .profile-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .dictionary-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dictionary-item:last-child {
+            border-bottom: none;
+        }
+
+        .phrase-original {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .phrase-translation {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .phrase-context {
+            font-size: 14px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .add-phrase-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Верхняя шапка с навигацией -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo"></h1>
+                <nav class="brics-nav">
+                    <a href="#" class="brics-link">Россия</a>
+                    <a href="#" class="brics-link">Китай</a>
+                    <a href="#" class="brics-link">Индия</a>
+                    <a href="#" class="brics-link">Бразилия</a>
+                    <a href="#" class="brics-link">ЮАР</a>
+                </nav>
+            </div>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск видео, статей и уроков...">
+                    <button class="search-btn">Найти</button>
+                </div>
+            </div>
+            <div class="user-section">
+                <button class="upload-btn">Загрузить видео</button>
+                <button class="auth-btn">Выйти</button>
+                <button class="register-btn">Мой профиль</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Вторая шапка с категориями -->
+    <nav class="category-nav">
+        <div class="container">
+            <a href="index.html" class="category-link">Главная</a>
+            <a href="videos.html" class="category-link">Видеоуроки</a>
+            <a href="#" class="category-link">Статьи</a>
+            <a href="profile.html" class="category-link active">Личный кабинет</a>
+        </div>
+    </nav>
+
+    <!-- Основное содержимое страницы профиля -->
+    <main class="main-content">
+        <div class="container">
+            <h1>Личный кабинет</h1>
+
+            <div class="profile-container">
+                <!-- Боковая панель профиля -->
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="https://via.placeholder.com/100" alt="Аватар пользователя">
+                        <h2>Иван Иванов</h2>
+                        <p>Уровень: Новичок</p>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="#" class="active" data-tab="progress">Мой прогресс</a></li>
+                        <li><a href="#" data-tab="watched">Просмотренные</a></li>
+                        <li><a href="#" data-tab="saved">Отложенные</a></li>
+                        <li><a href="#" data-tab="liked">Понравившиеся</a></li>
+                        <li><a href="#" data-tab="dictionary">Мой словарь</a></li>
+                        <li><a href="#" data-tab="wishlist">Список желаний</a></li>
+                        <li><a href="#" data-tab="settings">Настройки</a></li>
+                    </ul>
+                </div>
+
+                <!-- Основное содержимое профиля -->
+                <div class="profile-content">
+                    <!-- Вкладка прогресса -->
+                    <div class="tab-content active" id="progress">
+                        <h2>Мой прогресс</h2>
+                        <div class="progress-stats">
+                            <div class="stat-item">
+                                <h3>Всего изучено уроков</h3>
+                                <p class="stat-value">12</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Средний прогресс</h3>
+                                <p class="stat-value">65%</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Дней подряд</h3>
+                                <p class="stat-value">7</p>
+                            </div>
+                        </div>
+
+                        <h3>Активные курсы</h3>
+                        <div class="active-courses">
+                            <!-- Курс 1 -->
+                            <div class="course-item">
+                                <h4>Испанский для начинающих</h4>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <p>Прогресс: 75%</p>
+                            </div>
+
+                            <!-- Курс 2 -->
+                            <div class="course-item">
+                                <h4>Английская грамматика</h4>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <p>Прогресс: 45%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вкладка словаря -->
+                    <div class="tab-content" id="dictionary">
+                        <h2>Мой словарь</h2>
+                        <p>Здесь собраны фразы и слова, которые вы сохранили из просмотренных видео</p>
+
+                        <div class="dictionary-list">
+                            <!-- Фраза 1 -->
+                            <div class="dictionary-item">
+                                <div class="phrase-original">Hola, ¿cómo estás?</div>
+                                <div class="phrase-translation">Привет, как дела?</div>
+                                <div class="phrase-context">Из видео: "Основные фразы для путешествий"</div>
+                            </div>
+
+                            <!-- Фраза 2 -->
+                            <div class="dictionary-item">
+                                <div class="phrase-original">Gracias por tu ayuda</div>
+                                <div class="phrase-translation">Спасибо за помощь</div>
+                                <div class="phrase-context">Из видео: "Основные фразы для путешествий"</div>
+                            </div>
+
+                            <!-- Фраза 3 -->
+                            <div class="dictionary-item">
+                                <div class="phrase-original">I would like to order...</div>
+                                <div class="phrase-translation">Я бы хотел заказать...</div>
+                                <div class="phrase-context">Из видео: "Английский в ресторане"</div>
+                            </div>
+                        </div>
+
+                        <button class="add-phrase-btn">Добавить свою фразу</button>
+                    </div>
+
+                    <!-- Вкладка списка желаний -->
+                    <div class="tab-content" id="wishlist">
+                        <h2>Список желаний</h2>
+                        <p>Места, куда вы хотите поехать после изучения культуры и языка</p>
+
+                        <div class="wishlist-items">
+                            <!-- Место 1 -->
+                            <div class="wishlist-item">
+                                <h3>Мачу-Пикчу, Перу</h3>
+                                <p>Древний город инков в горах. Изучаю испанский, чтобы лучше понять культуру.</p>
+                                <div class="wishlist-progress">
+                                    <span>Подготовка: 40%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Место 2 -->
+                            <div class="wishlist-item">
+                                <h3>Токио, Япония</h3>
+                                <p>Мечтаю посетить традиционные онсены и попробовать настоящую японскую кухню.</p>
+                                <div class="wishlist-progress">
+                                    <span>Подготовка: 15%</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 15%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Остальные вкладки будут аналогичными -->
+                    <div class="tab-content" id="watched">
+                        <h2>Просмотренные видео</h2>
+                        <p>Здесь будут отображаться все просмотренные вами видеоуроки</p>
+                    </div>
+
+                    <div class="tab-content" id="saved">
+                        <h2>Отложенные видео</h2>
+                        <p>Видео, которые вы сохранили для просмотра позже</p>
+                    </div>
+
+                    <div class="tab-content" id="liked">
+                        <h2>Понравившиеся видео</h2>
+                        <p>Видео, которые вам понравились</p>
+                    </div>
+
+                    <div class="tab-content" id="settings">
+                        <h2>Настройки профиля</h2>
+                        <p>Здесь вы можете изменить настройки вашего аккаунта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Унитивид</h3>
+                    <p>Образовательно-развлекательная платформа для изучения языков и культур стран БРИКС</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="videos.html">Видеоуроки</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Страны БРИКС</h4>
+                    <ul>
+                        <li><a href="#">Россия</a></li>
+                        <li><a href="#">Китай</a></li>
+                        <li><a href="#">Индия</a></li>
+                        <li><a href="#">Бразилия</a></li>
+                        <li><a href="#">ЮАР</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unitivid. Учим языки и культуры вместе!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Переключение между вкладками в личном кабинете
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabLinks = document.querySelectorAll('.profile-menu a');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Убираем активный класс у всех ссылок и вкладок
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    // Добавляем активный класс текущей ссылке
+                    this.classList.add('active');
+
+                    // Показываем соответствующую вкладку
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

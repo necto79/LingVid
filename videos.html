@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеоуроки - Унитивид</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Верхняя шапка с навигацией -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo">Унитивид</h1>
+                <nav class="brics-nav">
+                    <a href="russia.html" class="brics-link">Россия</a>
+                    <a href="china.html" class="brics-link">Китай</a>
+                    <a href="india.html" class="brics-link">Индия</a>
+                    <a href="brazil.html" class="brics-link">Бразилия</a>
+                    <a href="south-africa.html" class="brics-link">ЮАР</a>
+                </nav>
+            </div>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск уроков...">
+                    <button class="search-btn">Найти</button>
+                </div>
+            </div>
+            <div class="user-section">
+                <button class="upload-btn">Загрузить видео</button>
+                <button class="auth-btn">Войти</button>
+                <button class="register-btn">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Вторая шапка с категориями -->
+    <nav class="category-nav">
+        <div class="container">
+            <a href="index.html" class="category-link">Главная</a>
+            <a href="videos.html" class="category-link active">Видеоуроки</a>
+            <a href="#" class="category-link">Статьи</a>
+            <a href="profile.html" class="category-link">Личный кабинет</a>
+        </div>
+    </nav>
+
+    <!-- Основное содержимое страницы видео -->
+    <main class="main-content videos-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Видеоуроки</h1>
+                <p class="page-description">Выбирайте уроки по языкам и уровням</p>
+            </div>
+
+            <!-- Фильтры -->
+            <div class="filters-section">
+                <div class="filter-group">
+                    <h3>Язык:</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active">Все</button>
+                        <button class="filter-btn">Русский</button>
+                        <button class="filter-btn">Катайский</button>
+                        <button class="filter-btn">Английский</button>
+                        <button class="filter-btn">Хинди</button>
+                        <button class="filter-btn">Португальский</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Уровень:</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active">Все</button>
+                        <button class="filter-btn">Начальный</button>
+                        <button class="filter-btn">Средний</button>
+                        <button class="filter-btn">Продвинутый</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Категория:</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active">Все</button>
+                        <button class="filter-btn">Грамматика</button>
+                        <button class="filter-btn">Произношение</button>
+                        <button class="filter-btn">Лексика</button>
+                        <button class="filter-btn">Диалоги</button>
+                        <button class="filter-btn">Культура</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-info">
+                <p>Найдено уроков: 24</p>
+                <div class="sort-options">
+                    <label for="sort">Сортировка:</label>
+                    <select id="sort">
+                        <option value="popular">По популярности</option>
+                        <option value="newest">Сначала новые</option>
+                        <option value="progress">По прогрессу</option>
+                        <option value="duration">По длительности</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Список видео -->
+            <div class="videos-list">
+                <!-- Видео 1 -->
+                <div class="video-list-item">
+                    <div class="video-preview">
+                        <img src="https://media.istockphoto.com/id/1220314627/ru/фото/улыбаясь-элегантная-женщина-с-ноутбуком-заметок-в-блокноте.jpg?s=612x612&w=0&k=20&c=Gl66A4TMxiEbwi-QXZLbfLYrtMshEgKwXZ6rTXwuEq4="
+                            alt="Основные фразы для путешествий">
+                        <div class="video-duration">15:30</div>
+                        <div class="progress-overlay">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <div class="language-tag">
+                            <span class="language">Английский</span>
+                            <span class="level">Начальный</span>
+                        </div>
+                        <h3 class="video-title">Основные фразы для путешествий</h3>
+                        <p class="video-description">Изучите ключевые фразы для комфортного путешествия по англоязычным
+                            странам</p>
+                        <div class="video-meta">
+                            <span class="video-views">1.2K просмотров</span>
+                            <span class="video-date">2 дня назад</span>
+                        </div>
+                        <div class="progress-info">
+                            <span>Прогресс: 75%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="continue-btn">Продолжить</button>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+
+                <!-- Видео 2 -->
+                <div class="video-list-item">
+                    <div class="video-preview">
+                        <img src="https://media.istockphoto.com/id/1306829952/ru/фото/научный-символ-китайский-флаг.jpg?s=612x612&w=0&k=20&c=2rZzgPfCnGuktz6pJh8A_5eIpuIc-sgy9BFarrZZ_oA="
+                            alt="Грамматика для начинающих">
+                        <div class="video-duration">22:15</div>
+                        <div class="progress-overlay">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <div class="language-tag">
+                            <span class="language">Китайский</span>
+                            <span class="level">Начальный</span>
+                        </div>
+                        <h3 class="video-title">Грамматика для начинающих</h3>
+                        <p class="video-description">Основы грамматики: времена, артикли и построение
+                            предложений</p>
+                        <div class="video-meta">
+                            <span class="video-views">3.4K просмотров</span>
+                            <span class="video-date">1 неделя назад</span>
+                        </div>
+                        <div class="progress-info">
+                            <span>Прогресс: 45%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="continue-btn">Продолжить</button>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="video-list-item">
+                    <div class="video-preview">
+                        <img src="https://media.istockphoto.com/id/1198436319/ru/фото/вопрос-вы-говорите-по-русски.jpg?s=612x612&w=0&k=20&c=RxxnYXyVvWiOx0Iqq99Q3JAM9vE_nccDI0ihnWYPlLM="
+                            alt="Деловой английский">
+                        <div class="video-duration">18:45</div>
+                        <div class="progress-overlay">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <div class="language-tag">
+                            <span class="language">Русский</span>
+                            <span class="level">Продвинутый</span>
+                        </div>
+                        <h3 class="video-title">Деловой русский</h3>
+                        <p class="video-description">Профессиональная лексика для бизнес-встреч, переговоров и
+                            презентаций</p>
+                        <div class="video-meta">
+                            <span class="video-views">856 просмотров</span>
+                            <span class="video-date">3 дня назад</span>
+                        </div>
+                        <div class="progress-info">
+                            <span>Прогресс: 20%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="continue-btn">Продолжить</button>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+
+                <!-- Видео 4 -->
+                <div class="video-list-item">
+                    <div class="video-preview">
+                        <img src="https://media.istockphoto.com/id/2226976692/ru/фото/флаг-китая-и-учебники-очки-на-деревянном-столе-домашнее-образование.jpg?s=612x612&w=0&k=20&c=YrvFQ6xamCvEmAH_diXAvPOnes0VWT0DfHsolYiM4SE="
+                            alt="Китайские иероглифы">
+                        <div class="video-duration">25:10</div>
+                        <div class="progress-overlay">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <div class="language-tag">
+                            <span class="language">Китайский</span>
+                            <span class="level">Начальный</span>
+                        </div>
+                        <h3 class="video-title">100 основных иероглифов</h3>
+                        <p class="video-description">Изучите базовые иероглифы для повседневного общения на китайском
+                        </p>
+                        <div class="video-meta">
+                            <span class="video-views">2.1K просмотров</span>
+                            <span class="video-date">5 дней назад</span>
+                        </div>
+                        <div class="progress-info">
+                            <span>Прогресс: 10%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="continue-btn">Начать</button>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+
+                <!-- Видео 5 -->
+                <div class="video-list-item">
+                    <div class="video-preview">
+                        <img src="https://avatars.mds.yandex.net/i?id=989490ce79c8647a1b6f1efda22aa4c3be85a286-16423761-images-thumbs&n=13"
+                            alt="Французская кухня">
+                        <div class="video-duration">12:35</div>
+                        <div class="progress-overlay">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-details">
+                        <div class="language-tag">
+                            <span class="language">Хинди</span>
+                            <span class="level">Средний</span>
+                        </div>
+                        <h3 class="video-title">Лексика хинди</h3>
+                        <p class="video-description">Слова и выражения хинди</p>
+                        <div class="video-meta">
+                            <span class="video-views">1.5K просмотров</span>
+                            <span class="video-date">1 неделя назад</span>
+                        </div>
+                        <div class="progress-info">
+                            <span>Прогресс: 0%</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-actions">
+                        <button class="continue-btn">Начать</button>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+
+             
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <button class="pagination-btn prev" disabled>Назад</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn next">Вперед</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Unitivid</h3>
+                    <p>Образовательно-развлекательная платформа для изучения языков и культур стран БРИКС</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="videos.html">Видеоуроки</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Страны БРИКС</h4>
+                    <ul>
+                        <li><a href="russia.html">Россия</a></li>
+                        <li><a href="china.html">Китай</a></li>
+                        <li><a href="india.html">Индия</a></li>
+                        <li><a href="brazil.html">Бразилия</a></li>
+                        <li><a href="south-africa.html">ЮАР</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">Правила использования</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unitivid. Учим языки и культуры вместе!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
