@@ -89,3 +89,86 @@ document.addEventListener('DOMContentLoaded', function () {
     updatePaginationState();
     
 });
+// Функционал для страниц авторизации и регистрации
+
+// Переключение видимости пароля
+const passwordToggles = document.querySelectorAll('.password-toggle');
+passwordToggles.forEach(toggle => {
+    toggle.addEventListener('click', function () {
+        const input = this.previousElementSibling;
+        if (input.type === 'password') {
+            input.type = 'text';
+            this.textContent = '🔒';
+        } else {
+            input.type = 'password';
+            this.textContent = '👁️';
+        }
+    });
+});
+
+// Проверка силы пароля
+const passwordInput = document.getElementById('regPassword');
+if (passwordInput) {
+    passwordInput.addEventListener('input', function () {
+        const password = this.value;
+        const strengthBar = document.querySelector('.strength-fill');
+        const strengthText = document.querySelector('.strength-text');
+
+        let strength = 0;
+
+        if (password.length >= 8) strength++;
+        if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+        if (password.match(/\d/)) strength++;
+        if (password.match(/[^a-zA-Z\d]/)) strength++;
+
+        strengthBar.setAttribute('data-strength', strength);
+
+        const strengthLabels = ['Слабый пароль', 'Средний пароль', 'Хороший пароль', 'Надежный пароль'];
+        strengthText.textContent = strengthLabels[strength] || 'Слабый пароль';
+    });
+}
+
+// Проверка совпадения паролей
+const confirmPasswordInput = document.getElementById('confirmPassword');
+if (confirmPasswordInput) {
+    confirmPasswordInput.addEventListener('input', function () {
+        const password = document.getElementById('regPassword').value;
+        const confirmPassword = this.value;
+
+        if (confirmPassword && password !== confirmPassword) {
+            this.classList.add('error');
+        } else {
+            this.classList.remove('error');
+        }
+    });
+}
+
+// Обработка форм
+const authForms = document.querySelectorAll('.auth-form');
+authForms.forEach(form => {
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // В реальном приложении здесь будет отправка данных на сервер
+        const submitBtn = this.querySelector('.auth-submit-btn');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = 'Загрузка...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            alert('Форма успешно отправлена!');
+        }, 1500);
+    });
+});
+
+// Социальные кнопки
+const socialBtns = document.querySelectorAll('.social-btn');
+socialBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const provider = this.classList[1];
+        alert(`Вход через ${provider} будет реализован позже`);
+    });
+});

@@ -1,110 +1,11 @@
-<!-- profile.html -->
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет - LingVid</title>
+    <title>Профиль - LingVid</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .profile-container {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 30px;
-        }
-
-        .profile-sidebar {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-avatar {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .profile-avatar img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .profile-menu {
-            list-style: none;
-        }
-
-        .profile-menu li {
-            margin-bottom: 10px;
-        }
-
-        .profile-menu a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            border-radius: 4px;
-        }
-
-        .profile-menu a.active,
-        .profile-menu a:hover {
-            background-color: #f1f1f1;
-            color: #ff0000;
-        }
-
-        .profile-content {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .dictionary-item {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .dictionary-item:last-child {
-            border-bottom: none;
-        }
-
-        .phrase-original {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .phrase-translation {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .phrase-context {
-            font-size: 14px;
-            color: #888;
-            font-style: italic;
-        }
-
-        .add-phrase-btn {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
@@ -112,25 +13,25 @@
     <header class="main-header">
         <div class="container">
             <div class="logo-section">
-                <h1 class="logo"></h1>
+                <h1 class="logo">LingVid</h1>
                 <nav class="brics-nav">
-                    <a href="#" class="brics-link">Россия</a>
-                    <a href="#" class="brics-link">Китай</a>
-                    <a href="#" class="brics-link">Индия</a>
-                    <a href="#" class="brics-link">Бразилия</a>
-                    <a href="#" class="brics-link">ЮАР</a>
+                    <a href="russia.html" class="brics-link">Россия</a>
+                    <a href="china.html" class="brics-link">Китай</a>
+                    <a href="india.html" class="brics-link">Индия</a>
+                    <a href="brazil.html" class="brics-link">Бразилия</a>
+                    <a href="south-africa.html" class="brics-link">ЮАР</a>
                 </nav>
             </div>
             <div class="search-section">
                 <div class="search-bar">
-                    <input type="text" placeholder="Поиск видео, статей и уроков...">
+                    <input type="text" placeholder="Поиск уроков...">
                     <button class="search-btn">Найти</button>
                 </div>
             </div>
             <div class="user-section">
                 <button class="upload-btn">Загрузить видео</button>
-                <button class="auth-btn">Выйти</button>
-                <button class="register-btn">Мой профиль</button>
+                <a href="auth.html" class="auth-btn">Войти</a>
+                <a href="register.html" class="register-btn">Регистрация</a>
             </div>
         </div>
     </header>
@@ -140,163 +41,281 @@
         <div class="container">
             <a href="index.html" class="category-link">Главная</a>
             <a href="videos.html" class="category-link">Видеоуроки</a>
-            <a href="#" class="category-link">Статьи</a>
-            <a href="profile.html" class="category-link active">Личный кабинет</a>
+            <a href="#progress" class="category-link active">Мой прогресс</a>
+            <a href="#achievements" class="category-link">Достижения</a>
+            <a href="#settings" class="category-link">Настройки</a>
         </div>
     </nav>
 
-    <!-- Основное содержимое страницы профиля -->
+    <!-- Основное содержимое -->
     <main class="main-content">
         <div class="container">
-            <h1>Личный кабинет</h1>
-
-            <div class="profile-container">
-                <!-- Боковая панель профиля -->
-                <div class="profile-sidebar">
-                    <div class="profile-avatar">
-                        <img src="https://via.placeholder.com/100" alt="Аватар пользователя">
-                        <h2>Иван Иванов</h2>
-                        <p>Уровень: Новичок</p>
-                    </div>
-
-                    <ul class="profile-menu">
-                        <li><a href="#" class="active" data-tab="progress">Мой прогресс</a></li>
-                        <li><a href="#" data-tab="watched">Просмотренные</a></li>
-                        <li><a href="#" data-tab="saved">Отложенные</a></li>
-                        <li><a href="#" data-tab="liked">Понравившиеся</a></li>
-                        <li><a href="#" data-tab="dictionary">Мой словарь</a></li>
-                        <li><a href="#" data-tab="wishlist">Список желаний</a></li>
-                        <li><a href="#" data-tab="settings">Настройки</a></li>
-                    </ul>
-                </div>
-
-                <!-- Основное содержимое профиля -->
-                <div class="profile-content">
-                    <!-- Вкладка прогресса -->
-                    <div class="tab-content active" id="progress">
-                        <h2>Мой прогресс</h2>
-                        <div class="progress-stats">
-                            <div class="stat-item">
-                                <h3>Всего изучено уроков</h3>
-                                <p class="stat-value">12</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>Средний прогресс</h3>
-                                <p class="stat-value">65%</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3>Дней подряд</h3>
-                                <p class="stat-value">7</p>
-                            </div>
-                        </div>
-
-                        <h3>Активные курсы</h3>
-                        <div class="active-courses">
-                            <!-- Курс 1 -->
-                            <div class="course-item">
-                                <h4>Испанский для начинающих</h4>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 75%"></div>
-                                </div>
-                                <p>Прогресс: 75%</p>
-                            </div>
-
-                            <!-- Курс 2 -->
-                            <div class="course-item">
-                                <h4>Английская грамматика</h4>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 45%"></div>
-                                </div>
-                                <p>Прогресс: 45%</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Вкладка словаря -->
-                    <div class="tab-content" id="dictionary">
-                        <h2>Мой словарь</h2>
-                        <p>Здесь собраны фразы и слова, которые вы сохранили из просмотренных видео</p>
-
-                        <div class="dictionary-list">
-                            <!-- Фраза 1 -->
-                            <div class="dictionary-item">
-                                <div class="phrase-original">Hola, ¿cómo estás?</div>
-                                <div class="phrase-translation">Привет, как дела?</div>
-                                <div class="phrase-context">Из видео: "Основные фразы для путешествий"</div>
-                            </div>
-
-                            <!-- Фраза 2 -->
-                            <div class="dictionary-item">
-                                <div class="phrase-original">Gracias por tu ayuda</div>
-                                <div class="phrase-translation">Спасибо за помощь</div>
-                                <div class="phrase-context">Из видео: "Основные фразы для путешествий"</div>
-                            </div>
-
-                            <!-- Фраза 3 -->
-                            <div class="dictionary-item">
-                                <div class="phrase-original">I would like to order...</div>
-                                <div class="phrase-translation">Я бы хотел заказать...</div>
-                                <div class="phrase-context">Из видео: "Английский в ресторане"</div>
-                            </div>
-                        </div>
-
-                        <button class="add-phrase-btn">Добавить свою фразу</button>
-                    </div>
-
-                    <!-- Вкладка списка желаний -->
-                    <div class="tab-content" id="wishlist">
-                        <h2>Список желаний</h2>
-                        <p>Места, куда вы хотите поехать после изучения культуры и языка</p>
-
-                        <div class="wishlist-items">
-                            <!-- Место 1 -->
-                            <div class="wishlist-item">
-                                <h3>Мачу-Пикчу, Перу</h3>
-                                <p>Древний город инков в горах. Изучаю испанский, чтобы лучше понять культуру.</p>
-                                <div class="wishlist-progress">
-                                    <span>Подготовка: 40%</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 40%"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Место 2 -->
-                            <div class="wishlist-item">
-                                <h3>Токио, Япония</h3>
-                                <p>Мечтаю посетить традиционные онсены и попробовать настоящую японскую кухню.</p>
-                                <div class="wishlist-progress">
-                                    <span>Подготовка: 15%</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 15%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Остальные вкладки будут аналогичными -->
-                    <div class="tab-content" id="watched">
-                        <h2>Просмотренные видео</h2>
-                        <p>Здесь будут отображаться все просмотренные вами видеоуроки</p>
-                    </div>
-
-                    <div class="tab-content" id="saved">
-                        <h2>Отложенные видео</h2>
-                        <p>Видео, которые вы сохранили для просмотра позже</p>
-                    </div>
-
-                    <div class="tab-content" id="liked">
-                        <h2>Понравившиеся видео</h2>
-                        <p>Видео, которые вам понравились</p>
-                    </div>
-
-                    <div class="tab-content" id="settings">
-                        <h2>Настройки профиля</h2>
-                        <p>Здесь вы можете изменить настройки вашего аккаунта</p>
-                    </div>
-                </div>
+            <!-- Заголовок страницы -->
+            <div class="page-header">
+                <h1>Личный кабинет</h1>
+                <p class="page-description">Управляйте вашим профилем и отслеживайте прогресс в изучении языков</p>
             </div>
+
+            <!-- Основная информация профиля -->
+            <section class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://avatars.mds.yandex.net/i?id=4fb8c5a5048f541ccdbdcbbca7d9aa61bf6d491c-4571791-images-thumbs&n=13" alt="Аватар пользователя">
+                        <button class="edit-avatar-btn">✏️</button>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Иван Петров</h2>
+                        <p class="profile-level">Средний уровень</p>
+                        <p class="profile-join">На платформе с января 2024</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Пройдено курсов</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">156</span>
+                                <span class="stat-label">Часов обучения</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">89%</span>
+                                <span class="stat-label">Средний прогресс</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="edit-profile-btn">Редактировать профиль</button>
+                        <button class="premium-btn">Премиум доступ</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Прогресс по языкам -->
+            <section id="progress" class="languages-progress">
+                <h2>Мой прогресс по языкам</h2>
+                <div class="progress-grid">
+                    <div class="language-progress-card">
+                        <div class="language-header">
+                            <span class="language-flag">🇷🇺</span>
+                            <h3>Русский</h3>
+                            <span class="language-level">Продвинутый</span>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                            <span class="progress-percent">92%</span>
+                        </div>
+                        <div class="language-stats">
+                            <div class="stat">
+                                <span class="stat-value">45</span>
+                                <span class="stat-name">уроков</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">12ч</span>
+                                <span class="stat-name">времени</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">Продолжить</button>
+                    </div>
+
+                    <div class="language-progress-card">
+                        <div class="language-header">
+                            <span class="language-flag">🇨🇳</span>
+                            <h3>Китайский</h3>
+                            <span class="language-level">Средний</span>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span class="progress-percent">65%</span>
+                        </div>
+                        <div class="language-stats">
+                            <div class="stat">
+                                <span class="stat-value">28</span>
+                                <span class="stat-name">уроков</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">8ч</span>
+                                <span class="stat-name">времени</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">Продолжить</button>
+                    </div>
+
+                    <div class="language-progress-card">
+                        <div class="language-header">
+                            <span class="language-flag">🇺🇸</span>
+                            <h3>Английский</h3>
+                            <span class="language-level">Начальный</span>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-percent">30%</span>
+                        </div>
+                        <div class="language-stats">
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-name">уроков</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4ч</span>
+                                <span class="stat-name">времени</span>
+                            </div>
+                        </div>
+                        <button class="continue-btn">Продолжить</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Недавно просмотренные видео -->
+            <section class="recent-videos">
+                <h2>Недавно просмотренные</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://avatars.mds.yandex.net/i?id=f4bb9b657c5fd9b2a71b6c858fc62c38b410f4a5-4859319-images-thumbs&ref=rim&n=33&w=268&h=200" alt="Основы китайской грамматики">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="language-tag">
+                                <span class="language">Китайский</span>
+                                <span class="level">Средний</span>
+                            </div>
+                            <h3 class="video-title">Основы китайской грамматики</h3>
+                            <div class="video-meta">
+                                <span class="progress-text">Просмотрено 75%</span>
+                                <button class="continue-btn">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://avatars.mds.yandex.net/i?id=b8cba8469fcae363a9925de34f259b379f9a4570-5103223-images-thumbs&n=13" alt="Русские идиомы">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="language-tag">
+                                <span class="language">Русский</span>
+                                <span class="level">Продвинутый</span>
+                            </div>
+                            <h3 class="video-title">Русские идиомы и выражения</h3>
+                            <div class="video-meta">
+                                <span class="progress-text">Завершено</span>
+                                <button class="review-btn">Повторить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://avatars.mds.yandex.net/i?id=7ad4d0529724bd39eca81bad2e2e3338b4fa6bcf-8819334-images-thumbs&n=13" alt="Английское произношение">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <div class="language-tag">
+                                <span class="language">Английский</span>
+                                <span class="level">Начальный</span>
+                            </div>
+                            <h3 class="video-title">Английское произношение для начинающих</h3>
+                            <div class="video-meta">
+                                <span class="progress-text">Просмотрено 45%</span>
+                                <button class="continue-btn">Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Достижения -->
+            <section id="achievements" class="achievements-section">
+                <h2>Мои достижения</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-info">
+                            <h3>Первый шаг</h3>
+                            <p>Завершите первый урок</p>
+                            <span class="achievement-date">Получено 15.01.2024</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">📚</div>
+                        <div class="achievement-info">
+                            <h3>Упорный ученик</h3>
+                            <p>Проведите 10 часов за обучением</p>
+                            <span class="achievement-date">Получено 20.01.2024</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🌍</div>
+                        <div class="achievement-info">
+                            <h3>Полиглот</h3>
+                            <p>Изучайте 3 языка одновременно</p>
+                            <span class="achievement-date">Получено 05.02.2024</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">⚡</div>
+                        <div class="achievement-info">
+                            <h3>Скоростник</h3>
+                            <p>Завершите курс за 7 дней</p>
+                            <span class="achievement-progress">Прогресс: 60%</span>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">💎</div>
+                        <div class="achievement-info">
+                            <h3>Мастер</h3>
+                            <p>Завершите 5 курсов на 100%</p>
+                            <span class="achievement-progress">Прогресс: 40%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Настройки профиля -->
+            <section id="settings" class="settings-section">
+                <h2>Настройки профиля</h2>
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Уведомления</h3>
+                        <p>Управляйте уведомлениями о новых уроках и прогрессе</p>
+                        <button class="setting-btn">Настроить</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Конфиденциальность</h3>
+                        <p>Настройки видимости вашего профиля и прогресса</p>
+                        <button class="setting-btn">Изменить</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Язык интерфейса</h3>
+                        <p>Выберите предпочитаемый язык для платформы</p>
+                        <button class="setting-btn">Сменить</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Экспорт данных</h3>
+                        <p>Скачайте ваши данные о прогрессе и достижениях</p>
+                        <button class="setting-btn">Экспорт</button>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -320,11 +339,11 @@
                 <div class="footer-section">
                     <h4>Страны БРИКС</h4>
                     <ul>
-                        <li><a href="#">Россия</a></li>
-                        <li><a href="#">Китай</a></li>
-                        <li><a href="#">Индия</a></li>
-                        <li><a href="#">Бразилия</a></li>
-                        <li><a href="#">ЮАР</a></li>
+                        <li><a href="russia.html">Россия</a></li>
+                        <li><a href="">Китай</a></li>
+                        <li><a href="">Индия</a></li>
+                        <li><a href="">Бразилия</a></li>
+                        <li><a href="">ЮАР</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -337,37 +356,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LingVid Учим языки и культуры вместе!</p>
+                <p>&copy; 2024 LingVid Учим языки и культуры вместе!</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Переключение между вкладками в личном кабинете
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabLinks = document.querySelectorAll('.profile-menu a');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    // Убираем активный класс у всех ссылок и вкладок
-                    tabLinks.forEach(l => l.classList.remove('active'));
-                    tabContents.forEach(c => c.classList.remove('active'));
-
-                    // Добавляем активный класс текущей ссылке
-                    this.classList.add('active');
-
-                    // Показываем соответствующую вкладку
-                    const tabId = this.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-        });
-    </script>
     <script src="script.js"></script>
 </body>
-
 
 </html>

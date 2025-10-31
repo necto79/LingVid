@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Россия - Культура и традиции | LingVid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="country-page.css">
+</head>
+
+<body>
+    <!-- Верхняя шапка с навигацией -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo">LingVid</h1>
+            <nav class="brics-nav">
+                <a href="russia.html" class="brics-link active">Россия</a>
+                <a href="" class="brics-link">Китай</a>
+                <a href="" class="brics-link">Индия</a>
+                <a href="" class="brics-link">Бразилия</a>
+                <a href="" class="brics-link">ЮАР</a>
+            </nav>
+            </div>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск видео, статей и уроков...">
+                    <button class="search-btn">Найти</button>
+                </div>
+            </div>
+            <div class="user-section">
+                <button class="upload-btn">Загрузить видео</button>
+                <a href="auth.html" class="auth-btn">Войти</a>
+                <a href="register.html" class="register-btn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Создать аккаунт</h2>
+                        <p>Присоединяйтесь к сообществу Унитивид</p>
+                    </div>
+
+                    <form class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Имя</label>
+                                <input type="text" id="firstName" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Фамилия</label>
+                                <input type="text" id="lastName" placeholder="Ваша фамилия" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regPassword">Пароль</label>
+                            <input type="password" id="regPassword" placeholder="Создайте пароль" required>
+                            <button type="button" class="password-toggle">👁️</button>
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill" data-strength="0"></div>
+                                </div>
+                                <span class="strength-text">Слабый пароль</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Подтверждение пароля</label>
+                            <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                            <button type="button" class="password-toggle">👁️</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Интересы (языки)</label>
+                            <select id="interests" multiple>
+                                <option value="english">Английский</option>
+                                <option value="chinese">Китайский</option>
+                                <option value="spanish">Испанский</option>
+                                <option value="french">Французский</option>
+                                <option value="german">Немецкий</option>
+                                <option value="japanese">Японский</option>
+                            </select>
+                            <small>Выберите один или несколько языков (удерживайте Ctrl)</small>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="agreement" required>
+                                <span class="checkmark"></span>
+                                Я соглашаюсь с <a href="#">условиями использования</a> и <a href="#">политикой
+                                    конфиденциальности</a>
+                            </label>
+
+                            <label class="checkbox">
+                                <input type="checkbox" id="newsletter">
+                                <span class="checkmark"></span>
+                                Получать новости и уведомления
+                            </label>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn">Создать аккаунт</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>или зарегистрируйтесь через</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="social-btn google">
+                            <span class="social-icon">🔍</span>
+                            Google
+                        </button>
+                        <button class="social-btn vk">
+                            <span class="social-icon">👥</span>
+                            VK
+                        </button>
+                        <button class="social-btn yandex">
+                            <span class="social-icon">Я</span>
+                            Яндекс
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Уже есть аккаунт? <a href="auth.html">Войти</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-features">
+                    <h3>Начните изучать языки сегодня</h3>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">🚀</span>
+                            <div>
+                                <h4>Быстрый старт</h4>
+                                <p>Начните обучение сразу после регистрации</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🎓</span>
+                            <div>
+                                <h4>Сертификаты</h4>
+                                <p>Получайте сертификаты о прохождении курсов</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💬</span>
+                            <div>
+                                <h4>Живое общение</h4>
+                                <p>Практикуйте язык с носителями и другими учениками</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📱</span>
+                            <div>
+                                <h4>Доступ везде</h4>
+                                <p>Занимайтесь на любом устройстве в любое время</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LingVid</h3>
+                <p>Образовательно-развлекательная платформа для изучения языков и культур стран БРИКС</p>
+            </div>
+            <div class="footer-section">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="videos.html">Видеоуроки</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Страны БРИКС</h4>
+                <ul>
+                    <li><a href="russia.html">Россия</a></li>
+                    <li><a href="">Китай</a></li>
+                    <li><a href="">Индия</a></li>
+                    <li><a href="">Бразилия</a></li>
+                    <li><a href="">ЮАР</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Поддержка</h4>
+                <ul>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Правила использования</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LingVid Учим языки и культуры вместе!</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+
+</html>

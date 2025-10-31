@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Россия - Культура и традиции | LingVid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="country-page.css">
+</head>
+
+<body>
+    <!-- Верхняя шапка с навигацией -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 class="logo">LingVid</h1>
+                <nav class="brics-nav">
+                    <a href="russia.html" class="brics-link active">Россия</a>
+                    <a href="" class="brics-link">Китай</a>
+                    <a href="" class="brics-link">Индия</a>
+                    <a href="" class="brics-link">Бразилия</a>
+                    <a href="" class="brics-link">ЮАР</a>
+                </nav>
+            </div>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск видео, статей и уроков...">
+                    <button class="search-btn">Найти</button>
+                </div>
+            </div>
+            <div class="user-section">
+                <button class="upload-btn">Загрузить видео</button>
+                <a href="auth.html" class="auth-btn">Войти</a>
+                <a href="register.html" class="register-btn">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Вход в аккаунт</h2>
+                        <p>Войдите, чтобы продолжить обучение</p>
+                    </div>
+
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Пароль</label>
+                            <input type="password" id="password" placeholder="Введите пароль" required>
+                            <button type="button" class="password-toggle">👁️</button>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox">
+                                <input type="checkbox" id="remember">
+                                <span class="checkmark"></span>
+                                Запомнить меня
+                            </label>
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                        </div>
+
+                        <button type="submit" class="auth-submit-btn">Войти</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>или войдите через</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="social-btn google">
+                            <span class="social-icon">🔍</span>
+                            Google
+                        </button>
+                        <button class="social-btn vk">
+                            <span class="social-icon">👥</span>
+                            VK
+                        </button>
+                        <button class="social-btn yandex">
+                            <span class="social-icon">Я</span>
+                            Яндекс
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-features">
+                    <h3>Преимущества Унитивид</h3>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <div>
+                                <h4>Персональный прогресс</h4>
+                                <p>Отслеживайте ваш прогресс в изучении языков</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📚</span>
+                            <div>
+                                <h4>Библиотека уроков</h4>
+                                <p>Доступ к тысячам видеоуроков и материалов</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌍</span>
+                            <div>
+                                <h4>Сообщество</h4>
+                                <p>Общайтесь с изучающими языки по всему миру</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LingVid</h3>
+                <p>Образовательно-развлекательная платформа для изучения языков и культур стран БРИКС</p>
+            </div>
+            <div class="footer-section">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="videos.html">Видеоуроки</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Страны БРИКС</h4>
+                <ul>
+                    <li><a href="russia.html">Россия</a></li>
+                    <li><a href="">Китай</a></li>
+                    <li><a href="">Индия</a></li>
+                    <li><a href="">Бразилия</a></li>
+                    <li><a href="">ЮАР</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Поддержка</h4>
+                <ul>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Правила использования</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LingVid Учим языки и культуры вместе!</p>
+        </div>
+    </div>
+</footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
