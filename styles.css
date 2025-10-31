@@ -2004,3 +2004,591 @@ body {
         text-align: center;
     }
 }
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦЫ РОССИИ ===== */
+
+/* Русские традиции и праздники */
+.traditions-section {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 60px 0;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.traditions-section h2 {
+    color: #d32f2f;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.traditions-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #d32f2f, #1976d2);
+    border-radius: 2px;
+}
+
+.traditions-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.traditions-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.traditions-text p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.traditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tradition-item {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.tradition-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d32f2f, #1976d2);
+}
+
+.tradition-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: #d32f2f;
+}
+
+.tradition-item h4 {
+    color: #d32f2f;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.tradition-item p {
+    color: #5d6d7e;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Русская кухня */
+.cuisine-section {
+    background: #fff;
+    padding: 60px 0;
+    margin: 40px 0;
+    position: relative;
+}
+
+.cuisine-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #d32f2f, #ff6b6b, #d32f2f);
+}
+
+.cuisine-section h2 {
+    color: #d32f2f;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.cuisine-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cuisine-text {
+    padding-right: 20px;
+}
+
+.cuisine-text p {
+    font-size: 1.1em;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.dish-item {
+    background: #f8f9fa;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #d32f2f;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dish-item:hover {
+    background: white;
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.15);
+    transform: translateX(5px);
+}
+
+.dish-item h4 {
+    color: #d32f2f;
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.dish-item p {
+    color: #5d6d7e;
+    line-height: 1.6;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.cuisine-image {
+    text-align: center;
+    position: relative;
+}
+
+.cuisine-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cuisine-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Путешествия по России */
+.travel-section {
+    background: linear-gradient(135deg, #1976d2 0%, #d32f2f 100%);
+    padding: 80px 0;
+    margin: 60px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.travel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.travel-section h2 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.travel-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+.travel-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.travel-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.travel-text p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.destination-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #2c3e50;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.destination-item:hover::before {
+    left: 100%;
+}
+
+.destination-item:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.destination-item h4 {
+    color: #d32f2f;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+.destination-item h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #1976d2;
+    border-radius: 1px;
+}
+
+.destination-item p {
+    color: #5d6d7e;
+    line-height: 1.7;
+    font-size: 0.95em;
+    margin: 0;
+}/* Путешествия по России */
+.travel-section {
+    background: #fff;
+    padding: 80px 0;
+    margin: 60px 0;
+    color: #2c3e50;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.travel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #d32f2f, #1976d2, #d32f2f);
+    border-radius: 15px 15px 0 0;
+}
+
+.travel-section h2 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    color: #d32f2f;
+}
+
+.travel-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, #d32f2f, #1976d2);
+    border-radius: 2px;
+}
+
+.travel-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.travel-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.travel-text p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #5d6d7e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.destination-item {
+    background: #f8f9fa;
+    padding: 35px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d32f2f, #1976d2);
+}
+
+.destination-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: white;
+    border-color: #d32f2f;
+}
+
+.destination-item h4 {
+    color: #d32f2f;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+.destination-item h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #1976d2;
+    border-radius: 1px;
+}
+
+.destination-item p {
+    color: #5d6d7e;
+    line-height: 1.7;
+    font-size: 0.95em;
+    margin: 0;
+}
+
+/* Адаптивность для раздела путешествий */
+@media (max-width: 768px) {
+    .travel-section {
+        padding: 40px 0;
+        margin: 30px 0;
+    }
+    
+    .travel-section h2 {
+        font-size: 2em;
+    }
+    
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .destination-item {
+        padding: 25px 20px;
+    }
+    
+    .travel-text p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-section h2 {
+        font-size: 1.8em;
+    }
+    
+    .destination-item {
+        padding: 20px 15px;
+    }
+    
+    .destination-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Адаптивность для новых разделов */
+@media (max-width: 768px) {
+    .traditions-section,
+    .cuisine-section,
+    .travel-section {
+        padding: 40px 0;
+        margin: 30px 0;
+    }
+    
+    .traditions-section h2,
+    .cuisine-section h2,
+    .travel-section h2 {
+        font-size: 2em;
+    }
+    
+    .cuisine-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cuisine-text {
+        padding-right: 0;
+    }
+    
+    .traditions-grid,
+    .dishes-grid,
+    .destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tradition-item,
+    .dish-item,
+    .destination-item {
+        padding: 25px 20px;
+    }
+    
+    .travel-text p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .traditions-section h2,
+    .cuisine-section h2,
+    .travel-section h2 {
+        font-size: 1.8em;
+    }
+    
+    .tradition-item,
+    .dish-item,
+    .destination-item {
+        padding: 20px 15px;
+    }
+    
+    .destination-item:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    .travel-section {
+        padding: 50px 0;
+    }
+}
+
+/* Анимации для плавного появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.traditions-section,
+.cuisine-section,
+.travel-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.tradition-item,
+.dish-item,
+.destination-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Задержки для последовательного появления элементов */
+.tradition-item:nth-child(1) { animation-delay: 0.1s; }
+.tradition-item:nth-child(2) { animation-delay: 0.2s; }
+.tradition-item:nth-child(3) { animation-delay: 0.3s; }
+.tradition-item:nth-child(4) { animation-delay: 0.4s; }
+
+.dish-item:nth-child(1) { animation-delay: 0.1s; }
+.dish-item:nth-child(2) { animation-delay: 0.2s; }
+.dish-item:nth-child(3) { animation-delay: 0.3s; }
+.dish-item:nth-child(4) { animation-delay: 0.4s; }
+
+.destination-item:nth-child(1) { animation-delay: 0.1s; }
+.destination-item:nth-child(2) { animation-delay: 0.2s; }
+.destination-item:nth-child(3) { animation-delay: 0.3s; }
+.destination-item:nth-child(4) { animation-delay: 0.4s; }
